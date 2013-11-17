@@ -94,7 +94,8 @@ class Article < Content
 
   include Article::States
 
-  class << self    def merge(first_id, second_id)
+  class << self    
+    def merge(first_id, second_id)
       first = Article.find(first_id)
       if Article.exists?(second_id)
         second = Article.find(second_id)
